@@ -1,7 +1,8 @@
 # certbot.sh
-
+```bash
 curl --url https://raw.githubusercontent.com/panpansh/certbot.sh/master/certbot.sh --output ~/certbot.sh
 chmod +x ~/certbot.sh
+```
 
 change certbot.sh to match your needs : 
 ```bash
