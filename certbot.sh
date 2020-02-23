@@ -2,7 +2,7 @@
 # set certbot_standalone_http_port
 certbot_standalone_http_port="80"
 
-certbot_mail_address="panpansh@apa.sh"
+certbot_mail_address="0x00@apa.sh"
 
 certbot_nginx="false"
 certbot_apache="false"
