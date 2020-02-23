@@ -14,3 +14,5 @@ certbot_apache="false"
 # When you get congratulations from letsencrypt you can start using prod servers
 certbot_server="${certbot_prod_server}"
 ```
+
+You are welcome to make changes.
