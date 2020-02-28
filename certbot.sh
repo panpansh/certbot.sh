@@ -28,7 +28,7 @@ certbot_print_help_function(){
 }
 if [[ $# -eq 0 ]]
 then
-    certbot_print_help_function
+    	certbot_print_help_function
 fi
 if [ $1 = "help" ]
 then
@@ -69,7 +69,7 @@ fi
 # set certbot_domains_list_input for $1
 certbot_domains_list_input="$1"
 
-if [ "$certbot_nginx" = "true" ]
+if [ "$certbot_nginx" != "true" ] && [ "$certbot_apache" != "true" ]
 then
 	# set certbot_domain_primary_subject_cn from certbot_domains_list_input
 	IFS=',' read -ra certbot_domains_array <<< "$certbot_domains_list_input"
