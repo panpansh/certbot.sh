@@ -29,12 +29,10 @@ certbot_print_help_function(){
 if [[ $# -eq 0 ]]
 then
     	certbot_print_help_function
-fi
-if [ $1 = "help" ]
+elif [ $1 = "help" ]
 then
 	certbot_print_help_function
-fi
-if [ $1 = "install" ]
+elif [ $1 = "install" ]
 then
 	# update apt
 	apt update
@@ -48,8 +46,7 @@ then
 		apt install python-certbot-apache -y
 	fi
 	exit 0
-fi
-if [ $1 = "delete" ]
+elif [ $1 = "delete" ]
 then
 	# delete cert domain
 	certbot delete --cert-name "$2"
@@ -58,12 +55,13 @@ then
 	rm /etc/letsencrypt/renewal-hooks/deploy/"$2".hook
 	echo -e "PRE POST DEPLOY renewal-hooks deleted"
 	exit 0
-fi
-if [ $1 = "list" ]
+elif [ $1 = "list" ]
 then
 	# list certbot certificates
 	certbot certificates
 	exit 0
+else
+	certbot_print_help_function
 fi
 
 # set certbot_domains_list_input for $1
